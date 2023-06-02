@@ -1,0 +1,45 @@
+.header{
+    border-bottom: solid 1px #ae2012;
+    padding: 20px 0;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-logo{
+            border-left: solid 1px #000;
+            padding-left: 15px;
+            color: #000;
+            font-size: 36px;
+            font-weight: 600;
+            span{
+                font-size: 30px;
+                font-weight: 400;
+            }
+        }
+        &-nav{
+            display: flex;
+            column-gap: 70px;
+            align-items: center;
+        }
+        &-links{
+            display: flex;
+            column-gap: 30px;
+            a{
+                color: #000;
+                font-size: 15px;
+                font-weight: 500;
+                &:hover{
+                    color: #ae2012;
+                }
+            }
+        }
+        &-btn{
+            background: #ae2012;
+            padding: 15px 45px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 18px;
+        }
+    }
+}

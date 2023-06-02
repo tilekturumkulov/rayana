@@ -1,0 +1,111 @@
+.about{
+    &__title{
+        margin: 50px 0;
+        color: #000;
+        font-size: 38px;
+        font-weight: 500;
+        position: relative;
+        &::after{
+            content: '';
+            height: 1px;
+            width: 80%;
+            background-color: #ae2012;
+            position: absolute;
+            left: 150px;
+            top: 32px;
+        }
+    }
+    &__services{
+        margin: 50px 0;
+        display: flex;
+        justify-content: space-evenly;
+        &-item{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: center;
+            text-align: center;
+            &:hover{
+                .about__services-item_icon, .about__services-item_title{
+                    color: #ae2012;
+                }
+            }
+            &_icon{
+               font-size: 38px;
+            }
+            &_title{
+                color: #000;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+    &__figure{
+        &-title{
+            margin: 80px 0;
+            text-align: center;
+            font-size: 34px;
+            font-weight: 500;
+            color: #000;
+        }
+        &-content{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        &-items{
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            text-align: center;
+            &:hover{
+                .about__figure-items_icon, .about__figure-items_count, .about__figure-items_text{
+                    color: #ae2012;
+                }
+            }
+            &_icon{
+                font-size: 38px;
+            }
+            &_count{
+                font-size: 34px;
+                font-weight: 500;
+                color: #000;
+            }
+            &_text{
+                font-size: 16px;
+                font-weight: 500;
+                color: #000;
+            }
+        }
+    }
+    &__content{
+        margin: 80px 0;
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            column-gap: 30px;
+        }
+        &-img{
+            width: 50%;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+        &-text{
+            width: 50%;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin: 50px 0;
+            span{
+                color: #ae2012;
+            }
+        }
+        &-bottom{
+            margin-top: 50px;
+            span{
+                font-size: 18px;
+                display: flex;
+                text-align: center;
+            }
+        }
+    }
+}

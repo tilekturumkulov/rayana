@@ -1,0 +1,86 @@
+.modal{
+    display: none;
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    z-index: 99;
+    top: -5%;
+    left: 33%;
+    transform: translateX(-50%);
+    &__title{
+        margin: 20px 0;
+        color: #000;
+        font-size: 38px;
+        font-weight: 500;
+        position: relative;
+    }
+    &__subtitle{
+        text-align: center;
+        color: #000;
+        font-size: 28px;
+        font-weight: 500;
+    }
+    &__content{
+        border: solid 1px #ae2012; 
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        width: 60%;
+        margin: 0 auto !important;
+        border-radius: 30px;
+        padding: 80px 90px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        :first-child{
+            font-size: 42px;
+        }
+        :nth-child(2){
+            font-size: 24px;
+        }
+        :nth-child(5){
+            height: 80px;
+            resize: none;
+            padding: 0 10px 60px; 
+        }
+        &-text{
+            font-size: 18px;
+            display: flex;
+            top: 50px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            padding: 20px 0 0 20px !important;
+            border-bottom: solid 1px #ae2012;
+        }
+        &-inp{
+            width: 100%;
+            border: none;
+            border-bottom: solid 1px #ae2012;
+            outline: none;
+            height: 50px;
+            border-radius: 15px;
+            &::placeholder{
+                padding-left: 10px;
+                color: #000;
+                font-size: 18px;
+            }
+        }
+        &-label{
+            padding-left: 20px;
+            font-size: 18;
+            font-weight: 600;
+            color: #ae2012
+            ;
+        }
+        &-btn{
+            padding: 25px 60px;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: 500;
+            background: #ae2012;
+            color: #fff;
+        }
+    }
+}
