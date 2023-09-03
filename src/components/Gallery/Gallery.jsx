@@ -14,14 +14,12 @@ const Gallery = ({itemData, imageActive, setImageActive}) => {
               <ImageList variant="masonry" cols={3} gap={8}>
                 {itemData.map((item) => (
                   <ImageListItem key={item.img}>
-                    <button onClick={() => setImageActive(item.title)}>
                     <img
                       src={item.img}
                       srcSet={item.img}
                       alt={item.title}
                       loading="lazy"
                       />
-                    </button>
                   </ImageListItem>
                 ))}
               </ImageList>

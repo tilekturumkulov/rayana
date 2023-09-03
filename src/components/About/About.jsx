@@ -1,6 +1,6 @@
 import AbouServices from '../AboutServices/AboutServices';
 import AboutFigure from '../AboutFigure/AboutFigure';
-import AboutImg from '../../assets/about.jpg'
+import AboutImg from '../../../public/images/about.jpeg'
 
 const About = () => {
     return (
