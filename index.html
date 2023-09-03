@@ -2,15 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rayana</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baytex</title>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8"></script>
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+996551577772", // WhatsApp number
+                telegram: "+996551577772", // Instagram username
+                call_to_action: "Отправьте нам сообщение", // Call to action
+                button_color: "#FF6550", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "whatsapp,instagram", // Order of buttons
+            };
+            var proto = document.location.protocol,
+                host = "getbutton.io",
+                url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /GetButton.io widget -->
 </body>
 
 </html>

@@ -1,9 +1,8 @@
-import React from 'react';
 import formImg from '../../assets/form.jpg'
 
 const Form = () => {
     return (
-        <div className='form'>
+        <div className='form' id=''>
             <div className="container">
                 <h2 className="form__title">Форма заявки</h2>
                 <div className="form__section">
@@ -19,7 +18,7 @@ const Form = () => {
                 </div>
             </div>
         </div>
-    );
+    )
 };
 
 export default Form;

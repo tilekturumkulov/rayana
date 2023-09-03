@@ -1,50 +1,43 @@
-.modal{
-    display: none;
-    position: absolute;
-    max-width: 100%;
-    width: 100%;
-    z-index: 99;
-    top: -5%;
-    left: 33%;
-    transform: translateX(-50%);
-    &__title{
-        margin: 20px 0;
-        color: #000;
-        font-size: 38px;
-        font-weight: 500;
-        position: relative;
-    }
-    &__subtitle{
+.modal {
+    z-index: 99999;
+    position: fixed;
+    margin: 0 auto;
+    top: -10vh;
+    width: 100vw;
+    height: 100vh;
+    background: #0000;
+    &__subtitle {
         text-align: center;
         color: #000;
         font-size: 28px;
         font-weight: 500;
     }
-    &__content{
-        border: solid 1px #ae2012; 
-        position: absolute;
-        top: 40px;
-        right: 40px;
+    &__section {
+        width: 100vw;
+        padding: 8% 0;
+    }
+    &__content {
+        position: relative;
+        border: solid 1px #ae2012;
         width: 60%;
         margin: 0 auto !important;
         border-radius: 30px;
-        padding: 80px 90px;
+        padding: 40px 45px;
         background: #fff;
         display: flex;
         flex-direction: column;
-        row-gap: 20px;
-        :first-child{
+        row-gap: 30px;
+         :first-child {
             font-size: 42px;
         }
-        :nth-child(2){
+         :nth-child(2) {
             font-size: 24px;
         }
-        :nth-child(5){
+         :nth-child(6) {
             height: 80px;
             resize: none;
-            padding: 0 10px 60px; 
         }
-        &-text{
+        &-text {
             font-size: 18px;
             display: flex;
             top: 50px;
@@ -54,27 +47,35 @@
             padding: 20px 0 0 20px !important;
             border-bottom: solid 1px #ae2012;
         }
-        &-inp{
+        &-close {
+            position: absolute;
+            right: 2%;
+            top: 3%;
+            color: white;
+            background: #ae2012;
+            border-radius: 100px;
+            padding: 10px 17px;
+        }
+        &-inp {
             width: 100%;
             border: none;
             border-bottom: solid 1px #ae2012;
             outline: none;
             height: 50px;
             border-radius: 15px;
-            &::placeholder{
+            &::placeholder {
                 padding-left: 10px;
                 color: #000;
                 font-size: 18px;
             }
         }
-        &-label{
+        &-label {
             padding-left: 20px;
             font-size: 18;
             font-weight: 600;
-            color: #ae2012
-            ;
+            color: #ae2012;
         }
-        &-btn{
+        &-btn {
             padding: 25px 60px;
             border-radius: 15px;
             font-size: 20px;
@@ -82,5 +83,204 @@
             background: #ae2012;
             color: #fff;
         }
+    }
+}
+
+@media (max-width: 950px) {
+    .modal {
+        top: 0;
+        &__content {
+            width: 70%;
+        }
+        &__title::after {
+            width: 64%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .modal__title::after {
+        width: 61%;
+    }
+}
+
+@media (max-width: 850px) {
+    .modal__content {
+        width: 75%;
+    }
+    .modal__title::after {
+        width: 59%;
+    }
+    .modal__section {
+        height: 500px;
+    }
+    .modal__content {
+        top: 0px;
+        right: 0px;
+        width: 75%;
+         :first-child {
+            font-size: 38px;
+        }
+         :nth-child(2) {
+            font-size: 20px;
+        }
+         :nth-child(3) {
+            font-size: 20px;
+        }
+         :nth-child(6) {
+            height: 120px;
+            resize: none;
+        }
+        &-inp {
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+        &-text {
+            font-size: 16px;
+        }
+        &-btn {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .modal__title::after {
+        width: 56%;
+    }
+}
+
+@media (max-width: 750px) {
+    .modal__title::after {
+        width: 52%;
+    }
+}
+
+@media (max-width: 700px) {
+    .modal__title {
+        font-size: 32px;
+    }
+    .modal__content {
+         :first-child {
+            font-size: 32px;
+        }
+         :nth-child(2) {
+            font-size: 16px;
+        }
+         :nth-child(3) {
+            font-size: 16px;
+        }
+         :nth-child(6) {
+            height: 120px;
+            resize: none;
+        }
+        &-inp {
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+        &-text {
+            font-size: 14px;
+        }
+        &-btn {
+            font-size: 14px;
+        }
+    }
+    .modal__title::after {
+        width: 55%;
+        left: 260px;
+    }
+}
+
+@media (max-width: 650px) {
+    .modal__section {
+        height: 600px;
+    }
+    .modal__title::after {
+        width: 51%;
+    }
+    .modal__content {
+        padding: 50px 45px;
+        &-inp {
+            height: 40px;
+        }
+         :nth-child(6) {
+            height: 70px;
+        }
+    }
+    .modal__section-img {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal__title::after {
+        width: 47%;
+    }
+}
+
+@media (max-width: 550px) {
+    .modal__title {
+        font-size: 24px;
+    }
+    .modal__content {
+        padding: 40px 30px;
+        width: 86%;
+        transform: translateX(-4.5%);
+         :first-child {
+            font-size: 24px;
+        }
+         :nth-child(2) {
+            font-size: 12px;
+        }
+         :nth-child(3) {
+            font-size: 12px;
+        }
+         :nth-child(6) {
+            height: 70px;
+            resize: none;
+        }
+        &-inp {
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+        &-text {
+            font-size: 12px;
+        }
+        &-btn {
+            font-size: 12px;
+        }
+    }
+    .modal__title::after {
+        width: 54%;
+        left: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal__title::after {
+        width: 100%;
+        top: 50px;
+        left: 0;
+    }
+    .modal__content-close {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    .modal__section {
+        height: 450px;
+    }
+    .modal__content {
+        padding: 20px 15px;
+         :nth-child(6) {
+            height: 70px;
+        }
+    }
+    .modal__content-inp {
+        height: 35px;
     }
 }

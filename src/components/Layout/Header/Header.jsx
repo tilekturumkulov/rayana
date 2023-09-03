@@ -1,37 +1,24 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../../../public/logo.jpg'
 
-const Header = () => {
+const Header = ({active, setActive}) => {
     return (
         <header className='header'>
             <div className="container">
                 <div className="header__content">
                     <NavLink to="/">
-                        <h1 className="header__content-logo">DEFILE<br></br>
-                        <span>
-                            ПОШИВ
-                        </span>
-                        </h1>
+                        <img className='header__content-logo' src={logo} alt="Baytex logo" />
                     </NavLink>
                     <div className="header__content-nav">
                         <div className="header__content-links">
-                            <NavLink to="/about"> 
+                            <NavLink href="#about"> 
                                 О нас
                             </NavLink>
-                            <NavLink to="/services"> 
-                                Наши услуги
-                            </NavLink>
-                            <NavLink to="/question"> 
-                                Вопросы
-                            </NavLink>
-                            <NavLink to="/form"> 
-                                Обратная связь
-                            </NavLink>
-                            <NavLink to="/contact"> 
+                            <NavLink href="#contact"> 
                                 Контакты
                             </NavLink>
                         </div>
-                        <button type='submit' className="header__content-btn">
+                        <button type='submit' className="header__content-btn" onClick={() => setActive(!active)}>
                             Заказать
                         </button>
                     </div>

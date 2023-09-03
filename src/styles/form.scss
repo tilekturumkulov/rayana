@@ -1,12 +1,12 @@
-.form{
+.form {
     margin: 150px 0;
-    &__title{
+    &__title {
         margin: 50px 0;
         color: #000;
         font-size: 38px;
         font-weight: 500;
         position: relative;
-        &::after{
+        &::after {
             content: '';
             height: 1px;
             width: 70%;
@@ -16,25 +16,25 @@
             top: 32px;
         }
     }
-    &__subtitle{
+    &__subtitle {
         text-align: center;
         color: #000;
         font-size: 28px;
         font-weight: 500;
     }
-    &__section{
+    &__section {
         border-radius: 30px;
         position: relative;
         height: 650px;
-        &-img{
+        &-img {
             height: 100%;
             width: 100%;
             object-fit: contain/cover;
             border-radius: 30px;
         }
     }
-    &__content{
-        border: solid 1px #ae2012; 
+    &__content {
+        border: solid 1px #ae2012;
         position: absolute;
         top: 80px;
         right: 40px;
@@ -46,18 +46,17 @@
         display: flex;
         flex-direction: column;
         row-gap: 30px;
-        :first-child{
+         :first-child {
             font-size: 42px;
         }
-        :nth-child(2){
+         :nth-child(2) {
             font-size: 24px;
         }
-        :nth-child(5){
+         :nth-child(5) {
             height: 120px;
             resize: none;
-            padding: 0 10px 60px; 
         }
-        &-text{
+        &-text {
             font-size: 18px;
             display: flex;
             top: 50px;
@@ -67,27 +66,26 @@
             padding: 20px 0 0 20px !important;
             border-bottom: solid 1px #ae2012;
         }
-        &-inp{
+        &-inp {
             width: 100%;
             border: none;
             border-bottom: solid 1px #ae2012;
             outline: none;
             height: 50px;
             border-radius: 15px;
-            &::placeholder{
+            &::placeholder {
                 padding-left: 10px;
                 color: #000;
                 font-size: 18px;
             }
         }
-        &-label{
+        &-label {
             padding-left: 20px;
             font-size: 18;
             font-weight: 600;
-            color: #ae2012
-            ;
+            color: #ae2012;
         }
-        &-btn{
+        &-btn {
             padding: 25px 60px;
             border-radius: 15px;
             font-size: 20px;
@@ -95,5 +93,177 @@
             background: #ae2012;
             color: #fff;
         }
+    }
+}
+
+@media (max-width: 950px) {
+    .form__title::after {
+        width: 64%;
+    }
+}
+
+@media (max-width: 900px) {
+    .form__title::after {
+        width: 61%;
+    }
+}
+
+@media (max-width: 850px) {
+    .form__title::after {
+        width: 59%;
+    }
+    .form__section {
+        height: 500px;
+    }
+    .form__content {
+        top: 0px;
+        right: 0px;
+        width: 100%;
+         :first-child {
+            font-size: 38px;
+        }
+         :nth-child(2) {
+            font-size: 20px;
+        }
+         :nth-child(5) {
+            height: 120px;
+            resize: none;
+        }
+        &-inp {
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+        &-text {
+            font-size: 16px;
+        }
+        &-btn {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .form__title::after {
+        width: 56%;
+    }
+}
+
+@media (max-width: 750px) {
+    .form__title::after {
+        width: 52%;
+    }
+}
+
+@media (max-width: 700px) {
+    .form__title {
+        font-size: 32px;
+    }
+    .form__content {
+         :first-child {
+            font-size: 32px;
+        }
+         :nth-child(2) {
+            font-size: 16px;
+        }
+         :nth-child(5) {
+            height: 120px;
+            resize: none;
+        }
+        &-inp {
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+        &-text {
+            font-size: 14px;
+        }
+        &-btn {
+            font-size: 14px;
+        }
+    }
+    .form__title::after {
+        width: 55%;
+        left: 260px;
+    }
+}
+
+@media (max-width: 650px) {
+    .form {
+        margin: 100px 0 0px;
+    }
+    .form__section {
+        height: 600px;
+    }
+    .form__title::after {
+        width: 51%;
+    }
+    .form__content {
+        padding: 50px 45px;
+    }
+    .form__section-img {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .form__title::after {
+        width: 47%;
+    }
+}
+
+@media (max-width: 550px) {
+    .form__title {
+        font-size: 24px;
+    }
+    .form__content {
+         :first-child {
+            font-size: 24px;
+        }
+         :nth-child(2) {
+            font-size: 12px;
+        }
+         :nth-child(5) {
+            height: 120px;
+            resize: none;
+        }
+        &-inp {
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+        &-text {
+            font-size: 12px;
+        }
+        &-btn {
+            font-size: 12px;
+        }
+    }
+    .form__title::after {
+        width: 54%;
+        left: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .form__title::after {
+        width: 100%;
+        top: 50px;
+        left: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .form__section {
+        height: 450px;
+    }
+    .form__content {
+        padding: 20px 15px;
+         :nth-child(5) {
+            height: 70px;
+        }
+    }
+    .form__content-inp {
+        height: 35px;
     }
 }

@@ -17,13 +17,15 @@ const Banner = () => {
                     >
                     <SwiperSlide>
                         <div className="banner__content first">
-                            <h2 className="banner__content-title">Качественный пошив<br></br>одежды, текстильных<br></br>и трикотажных изделий</h2>
+                            <h2 className="banner__content-title">Швейный цех в Кыргызстане
+                            </h2>
+                            <span className='banner__content-subtitle'>Надежный партнер для заказчиков из России: многолетний опыт<br></br>пошива женской одежды на заказ для Wildberris</span>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="banner__content second">
                             <h2 className="banner__content-title">
-                            Швейное производство<br></br>полного цикла, шьём<br></br>изделия под ключ!
+                            Швейное производство полного цикла, шьём изделия под ключ!
                             </h2>
                         </div>
                     </SwiperSlide>
